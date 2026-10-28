@@ -3,15 +3,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Check Python') {
             steps {
                 bat 'python --version'
+            }
+        }
+
+        stage('Check Project File') {
+            steps {
+                bat 'dir'
             }
         }
 
